@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(23, 205, 218);">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.udaipurian.com/wp-content/uploads/2020/03/lake-city-travels-udaipurian.jpg">
+    <title>MK TRAVELS</title>
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.login{  
+        width: 500px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 500 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 30px ;  
+          
+}  
+
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+    }
+
+         
+    
+  
+    </style>
+
+</head>
+<body>
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="winter.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="content">
+        <div style="background-image: url(https://mars.traveltours.in/Images/FTI/SM/7-sm-homebanner.jpg);background-size: cover;">
+          <br><br><br><br><br>
+        <center><h1 style="color: rgba(136, 10, 10, 0.884);font-size: 50px; font-family: 'Times New Roman', Times, serif; font-style: italic;">MK TRAVELS</h1></center>
+    <br><br><br><br><br>
+        </div>
+    <br><br><br><br><br><br>
+    <center><h1 style="color: rgba(136, 10, 10, 0.884); font-size: 50px; font-family: 'Times New Roman', Times, serif; font-style: italic;">LOGIN PAGE</h1> 
+        <div class="login">
+       
+            <form id="login" method="get" action="login.php">    
+                <label><b>User Name     
+                </b>    
+                </label>
+                <input type="text" id="Uname" placeholder="Username" name="userid"/>
+    
+                    
+                <br><br>    
+                <label><b>Password     
+                </b>    
+                </label>    
+                <input type="password" id="Pass" placeholder="Enter password" name="pswrd"/>  
+                <br><br>    
+                 <input type="button" id="log" onclick="check(this.form)" value="Login"/>      
+                <br><br>      
+                <br><br>   
+            </form>     
+        </div>    
+    </div>
+    
+
+   
+
+      <script>
+          var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+function check(form) {
+            if(form.userid.value == "Kishorkumar" && form.pswrd.value == "rona07") {
+                window.open('home.html')
+            }
+            else {
+                alert("Error Password or Username")
+            }
+        }
+      </script>
+    
+    
+
+    
+</body>
+</html>
